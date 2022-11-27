@@ -14,7 +14,7 @@ env:
   FLOW_MEMORY: 1024
   FLOW_ENV: '{"Variables":{"servicename": "alphatesting"}}'
   FLOW_TAGS: '{"OWNER": "ALPHA"}'    
-  FLOW_TRIGGERS: '[{"api":{"apiId": "95nzb6ke8a", "stage" : "latest", "parentId": "8ig19j", "resource": "alphadomain"}}]'
+  FLOW_TRIGGERS: '[{"api":{"apiId": "95nzb6ke8a", "stage" : "latest", "parentId": "8ig19j", "resource": "alphatest"}}]'
 
 jobs:
   deploy-development:
