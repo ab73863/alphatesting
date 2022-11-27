@@ -133,5 +133,212 @@
         ],
         "caname": "http-test-case",
         "category": "testing"
+    },
+    {
+        "id": "61ee4589.27387c",
+        "type": "EventListener",
+        "z": "main.flow",
+        "name": "POST /alphadomain/alphatest/post",
+        "provider": "aws",
+        "eventSource": "api",
+        "dynamodbOperation": "",
+        "apiMethod": "post",
+        "apiUrl": "/alphadomain/alphatest/post",
+        "albMethod": "any",
+        "albUrl": "",
+        "bucketName": "",
+        "event": "",
+        "reference": "",
+        "queueName": "",
+        "topicName": "",
+        "kapiUrl": "",
+        "kcronexpression": "",
+        "kreference": "",
+        "kObjectStoreName": "",
+        "zapiUrl": "",
+        "napiUrl": "",
+        "x": 122.5,
+        "y": 260,
+        "wires": [
+            [
+                "693ebbf0.dc26d4"
+            ]
+        ],
+        "caname": "event-handler",
+        "category": "general"
+    },
+    {
+        "id": "693ebbf0.dc26d4",
+        "type": "Logger",
+        "z": "main.flow",
+        "name": "Log",
+        "level": "INFO",
+        "message": "Request received",
+        "x": 312.5,
+        "y": 260,
+        "wires": [
+            [
+                "3a18ce66.565002"
+            ]
+        ],
+        "caname": "logger",
+        "category": "logging"
+    },
+    {
+        "id": "3a18ce66.565002",
+        "type": "EventListener-End",
+        "z": "main.flow",
+        "name": "Success",
+        "statusCode": "200",
+        "responseType": "http",
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "payload": "{\"hello\": \"posted\"}",
+        "eventPayload": "",
+        "eventType": "success",
+        "x": 522.5,
+        "y": 260,
+        "wires": [],
+        "caname": "eventlistenerend",
+        "category": "general"
+    },
+    {
+        "id": "4a08a92c.988f38",
+        "type": "EventListener",
+        "z": "main.flow",
+        "name": "PUT /alphadomain/alphatest/put",
+        "provider": "aws",
+        "eventSource": "api",
+        "dynamodbOperation": "",
+        "apiMethod": "put",
+        "apiUrl": "/alphadomain/alphatest/put",
+        "albMethod": "any",
+        "albUrl": "",
+        "bucketName": "",
+        "event": "",
+        "reference": "",
+        "queueName": "",
+        "topicName": "",
+        "kapiUrl": "",
+        "kcronexpression": "",
+        "kreference": "",
+        "kObjectStoreName": "",
+        "zapiUrl": "",
+        "napiUrl": "",
+        "x": 122.5,
+        "y": 360,
+        "wires": [
+            [
+                "9e5325ba.3c6608"
+            ]
+        ],
+        "caname": "event-handler",
+        "category": "general"
+    },
+    {
+        "id": "9e5325ba.3c6608",
+        "type": "Logger",
+        "z": "main.flow",
+        "name": "Log",
+        "level": "INFO",
+        "message": "Request received",
+        "x": 312.5,
+        "y": 360,
+        "wires": [
+            [
+                "7fbd3358.4dee5c"
+            ]
+        ],
+        "caname": "logger",
+        "category": "logging"
+    },
+    {
+        "id": "7fbd3358.4dee5c",
+        "type": "EventListener-End",
+        "z": "main.flow",
+        "name": "Success",
+        "statusCode": "200",
+        "responseType": "http",
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "payload": "{\"hello\": \"put\"}",
+        "eventPayload": "",
+        "eventType": "success",
+        "x": 522.5,
+        "y": 360,
+        "wires": [],
+        "caname": "eventlistenerend",
+        "category": "general"
+    },
+    {
+        "id": "224a4601.44a01a",
+        "type": "EventListener",
+        "z": "main.flow",
+        "name": "DELETE /alphadomain/alphatest/put",
+        "provider": "aws",
+        "eventSource": "api",
+        "dynamodbOperation": "",
+        "apiMethod": "delete",
+        "apiUrl": "/alphadomain/alphatest/delete",
+        "albMethod": "any",
+        "albUrl": "",
+        "bucketName": "",
+        "event": "",
+        "reference": "",
+        "queueName": "",
+        "topicName": "",
+        "kapiUrl": "",
+        "kcronexpression": "",
+        "kreference": "",
+        "kObjectStoreName": "",
+        "zapiUrl": "",
+        "napiUrl": "",
+        "x": 122.5,
+        "y": 460,
+        "wires": [
+            [
+                "3ac65d6c.b4e7d2"
+            ]
+        ],
+        "caname": "event-handler",
+        "category": "general"
+    },
+    {
+        "id": "3ac65d6c.b4e7d2",
+        "type": "Logger",
+        "z": "main.flow",
+        "name": "Log",
+        "level": "INFO",
+        "message": "Request received",
+        "x": 312.5,
+        "y": 460,
+        "wires": [
+            [
+                "60d9426c.94713c"
+            ]
+        ],
+        "caname": "logger",
+        "category": "logging"
+    },
+    {
+        "id": "60d9426c.94713c",
+        "type": "EventListener-End",
+        "z": "main.flow",
+        "name": "Success",
+        "statusCode": "200",
+        "responseType": "http",
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "payload": "{\"hello\": \"deleted\"}",
+        "eventPayload": "",
+        "eventType": "success",
+        "x": 522.5,
+        "y": 460,
+        "wires": [],
+        "caname": "eventlistenerend",
+        "category": "general"
     }
 ]
