@@ -415,7 +415,7 @@
         "id": "71e9b156.6afba",
         "type": "EventListener",
         "z": "main.flow",
-        "name": "EventListener",
+        "name": "SQS",
         "provider": "aws",
         "eventSource": "sqs",
         "dynamodbOperation": "",
@@ -486,6 +486,85 @@
         "eventType": "success",
         "x": 512.5,
         "y": 640,
+        "wires": [],
+        "caname": "eventlistenerend",
+        "category": "general"
+    },
+    {
+        "id": "ad058486.4a3048",
+        "type": "EventListener",
+        "z": "main.flow",
+        "name": "SNS",
+        "provider": "aws",
+        "eventSource": "sns",
+        "dynamodbOperation": "",
+        "apiMethod": "any",
+        "apiUrl": "",
+        "albMethod": "any",
+        "albUrl": "",
+        "bucketName": "",
+        "event": "s3:ObjectCreated:*",
+        "cognitoTrigger": "any",
+        "reference": "",
+        "queueName": "alphasns",
+        "topicName": "alphatopic.fifo",
+        "keventSource": "",
+        "kapiMethod": "any",
+        "kapiUrl": "",
+        "kcronexpression": "",
+        "kreference": "",
+        "kObjectStoreOperation": "all",
+        "kObjectStoreName": "",
+        "zeventSource": "",
+        "zapiMethod": "any",
+        "zapiUrl": "",
+        "neventSource": "",
+        "napiMethod": "any",
+        "napiUrl": "",
+        "x": 122.5,
+        "y": 740,
+        "wires": [
+            [
+                "72717a16.198d94"
+            ]
+        ],
+        "caname": "event-handler",
+        "category": "general"
+    },
+    {
+        "id": "72717a16.198d94",
+        "type": "Logger",
+        "z": "main.flow",
+        "name": "Log",
+        "level": "INFO",
+        "message": "Request received SQS",
+        "format": "string",
+        "headers": {},
+        "x": 305,
+        "y": 740,
+        "wires": [
+            [
+                "8392d6ba.48fc38"
+            ]
+        ],
+        "caname": "logger",
+        "category": "logging"
+    },
+    {
+        "id": "8392d6ba.48fc38",
+        "type": "EventListener-End",
+        "z": "main.flow",
+        "name": "Success",
+        "statusCode": "200",
+        "responseType": "http",
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "payload": "{\"hello\": \"SQS\"}",
+        "eventPayload": "",
+        "eventType": "success",
+        "x": 515,
+        "y": 740,
         "wires": [],
         "caname": "eventlistenerend",
         "category": "general"
