@@ -47,7 +47,7 @@ jobs:
     # install kumologica cli
     - name: Install kumologica cli
       run: |
-        npm install -g @kumologica/sdk@3.0.27-beta8 --ignore-scripts
+        npm install -g @kumologica/sdk@3.0.26 --ignore-scripts
         
     # build flow binaries, default settings used here,
     # the ./build/lambda.zip will be created
