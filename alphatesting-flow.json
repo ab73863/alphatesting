@@ -491,12 +491,12 @@
         "category": "general"
     },
     {
-        "id": "ad058486.4a3048",
+        "id": "416defe9.1c521",
         "type": "EventListener",
         "z": "main.flow",
-        "name": "SNS",
+        "name": "SQS2",
         "provider": "aws",
-        "eventSource": "sns",
+        "eventSource": "sqs",
         "dynamodbOperation": "",
         "apiMethod": "any",
         "apiUrl": "",
@@ -506,8 +506,8 @@
         "event": "s3:ObjectCreated:*",
         "cognitoTrigger": "any",
         "reference": "",
-        "queueName": "alphasns",
-        "topicName": "alphatopic.fifo",
+        "queueName": "alphaqueue2",
+        "topicName": "",
         "keventSource": "",
         "kapiMethod": "any",
         "kapiUrl": "",
@@ -522,17 +522,17 @@
         "napiMethod": "any",
         "napiUrl": "",
         "x": 122.5,
-        "y": 740,
+        "y": 760,
         "wires": [
             [
-                "72717a16.198d94"
+                "2b69e95e.ef3b96"
             ]
         ],
         "caname": "event-handler",
         "category": "general"
     },
     {
-        "id": "72717a16.198d94",
+        "id": "2b69e95e.ef3b96",
         "type": "Logger",
         "z": "main.flow",
         "name": "Log",
@@ -541,17 +541,17 @@
         "format": "string",
         "headers": {},
         "x": 305,
-        "y": 740,
+        "y": 760,
         "wires": [
             [
-                "8392d6ba.48fc38"
+                "929313f1.9bad8"
             ]
         ],
         "caname": "logger",
         "category": "logging"
     },
     {
-        "id": "8392d6ba.48fc38",
+        "id": "929313f1.9bad8",
         "type": "EventListener-End",
         "z": "main.flow",
         "name": "Success",
@@ -564,7 +564,7 @@
         "eventPayload": "",
         "eventType": "success",
         "x": 515,
-        "y": 740,
+        "y": 760,
         "wires": [],
         "caname": "eventlistenerend",
         "category": "general"
