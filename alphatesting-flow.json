@@ -537,7 +537,7 @@
         "z": "main.flow",
         "name": "Log",
         "level": "INFO",
-        "message": "Request received SQS",
+        "message": "Request received SQS2",
         "format": "string",
         "headers": {},
         "x": 305,
