@@ -14,7 +14,7 @@ env:
   FLOW_MEMORY: 1024
   FLOW_ENV: '{"Variables":{"servicename": "alphatesting"}}'
   FLOW_TAGS: '{"OWNER": "ALPHA"}'    
-  FLOW_TRIGGERS: '[{"api":{"apiId": "95nzb6ke8a", "stage" : "latest", "parentId": "8ig19j", "resource": "alphatest"}}]'
+  FLOW_TRIGGERS: '[{"api":{"apiId": "95nzb6ke8a", "stage" : "latest", "parentId": "8ig19j", "resource": "alphatest"}},{"sqs": {"queueArn": "arn:aws:sqs:ap-southeast-2:174842903734:alphaqueue"}}]'
 
 jobs:
   deploy-development:

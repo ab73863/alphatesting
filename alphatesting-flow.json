@@ -410,5 +410,84 @@
         "wires": [],
         "caname": "eventlistenerend",
         "category": "general"
+    },
+    {
+        "id": "71e9b156.6afba",
+        "type": "EventListener",
+        "z": "main.flow",
+        "name": "EventListener",
+        "provider": "aws",
+        "eventSource": "sqs",
+        "dynamodbOperation": "",
+        "apiMethod": "any",
+        "apiUrl": "",
+        "albMethod": "any",
+        "albUrl": "",
+        "bucketName": "",
+        "event": "s3:ObjectCreated:*",
+        "cognitoTrigger": "any",
+        "reference": "",
+        "queueName": "alphaqueue",
+        "topicName": "",
+        "keventSource": "",
+        "kapiMethod": "any",
+        "kapiUrl": "",
+        "kcronexpression": "",
+        "kreference": "",
+        "kObjectStoreOperation": "all",
+        "kObjectStoreName": "",
+        "zeventSource": "",
+        "zapiMethod": "any",
+        "zapiUrl": "",
+        "neventSource": "",
+        "napiMethod": "any",
+        "napiUrl": "",
+        "x": 120,
+        "y": 640,
+        "wires": [
+            [
+                "6c597150.fd3b7"
+            ]
+        ],
+        "caname": "event-handler",
+        "category": "general"
+    },
+    {
+        "id": "6c597150.fd3b7",
+        "type": "Logger",
+        "z": "main.flow",
+        "name": "Log",
+        "level": "INFO",
+        "message": "Request received SQS",
+        "format": "string",
+        "headers": {},
+        "x": 302.5,
+        "y": 640,
+        "wires": [
+            [
+                "ddb2a980.271bd8"
+            ]
+        ],
+        "caname": "logger",
+        "category": "logging"
+    },
+    {
+        "id": "ddb2a980.271bd8",
+        "type": "EventListener-End",
+        "z": "main.flow",
+        "name": "Success",
+        "statusCode": "200",
+        "responseType": "http",
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "payload": "{\"hello\": \"SQS\"}",
+        "eventPayload": "",
+        "eventType": "success",
+        "x": 512.5,
+        "y": 640,
+        "wires": [],
+        "caname": "eventlistenerend",
+        "category": "general"
     }
 ]
