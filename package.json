@@ -14,7 +14,7 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-      "@kumologica/runtime": "3.0.14"
+      "@kumologica/runtime": "3.1.0-alpha2"
     },
     "devDependencies": {
       "aws-sdk": "^2.513.0"
