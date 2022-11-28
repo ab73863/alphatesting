@@ -342,5 +342,73 @@
         "wires": [],
         "caname": "eventlistenerend",
         "category": "general"
+    },
+    {
+        "id": "b5254089.694c8",
+        "type": "EventListener",
+        "z": "main.flow",
+        "name": "GET /alphadomain/alphatest",
+        "provider": "aws",
+        "eventSource": "api",
+        "dynamodbOperation": "",
+        "apiMethod": "get",
+        "apiUrl": "/alphadomain/alphatest",
+        "albMethod": "any",
+        "albUrl": "",
+        "bucketName": "",
+        "event": "",
+        "reference": "",
+        "queueName": "",
+        "topicName": "",
+        "kapiUrl": "",
+        "kcronexpression": "",
+        "kreference": "",
+        "kObjectStoreName": "",
+        "zapiUrl": "",
+        "napiUrl": "",
+        "x": 122.5,
+        "y": 540,
+        "wires": [
+            [
+                "ea1a06cf.8f1968"
+            ]
+        ],
+        "caname": "event-handler",
+        "category": "general"
+    },
+    {
+        "id": "ea1a06cf.8f1968",
+        "type": "Logger",
+        "z": "main.flow",
+        "name": "Log",
+        "level": "INFO",
+        "message": "Request received 22222",
+        "format": "string",
+        "headers": {},
+        "x": 312.5,
+        "y": 540,
+        "wires": [
+            [
+                "78bf0b2.61a6af4"
+            ]
+        ],
+        "caname": "logger",
+        "category": "logging"
+    },
+    {
+        "id": "78bf0b2.61a6af4",
+        "type": "EventListener-End",
+        "z": "main.flow",
+        "name": "Success",
+        "statusCode": "200",
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "payload": "{\"hello\": \"world\"}",
+        "x": 522.5,
+        "y": 540,
+        "wires": [],
+        "caname": "eventlistenerend",
+        "category": "general"
     }
 ]
